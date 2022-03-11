@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+:root{
+    --orange: #FFBA9D;
+    --red: #891900;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-500: #2B2B2B;
+    --gray-400: #474747;
+    --gray-300: #777777;
+    --gray-200: #DFDFDF;
+    --gray-100: #F4F4F4;
+    --text-xl: 24px;
+    --text-lg: 19px;
+    --text-base: 16px;
+    --text-sm: 12px;
+}
+body, input, textarea, button{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: var(--text-base);
+    line-height: 32px;
+}
+.heading-1{
+    font-size: var(--text-xl);
+    line-height: 36px;
+}
+.heading-2{
+    font-size: var(--text-lg);
+    line-height: 28px;
+}
+.body-text-1{
+    font-size: var(--text-base);
+    line-height: 32px;
+}
+.body-text-2{
+    font-size: var(--text-base);
+    line-height: 24px;
+    font-weight: 300;
+}
+.body-text-sm{
+    font-size: var(--text-sm);
+    line-height: 14px;
+}
+p{
+    margin-bottom: 32px;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 10px;
+}
+
+/* 
+    Atoms
+*/
+.btn{
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 24px;
+    padding: 12px 24px;
+    display: inline-block;
+    background-color: var(--gray-400);
+    color: var(--white);
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+.btn:hover,.btn:active{
+    background-color: var(--gray-500);
+}
+
+.arrow-btn{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-100);
+    border-radius: 3px;
+    transition: all 300ms ease-in-out;
+    border: 1px solid var(--gray-100);
+}
+.arrow-btn:hover{
+    border: 1px solid var(--gray-400);
+}
+
+
+/* 
+    Header
+*/
+header{
+    margin-top: 96px;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-search{
+    display: flex;
+}
+nav ul{
+    display: flex;
+    gap: 48px;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: var(--gray-300);
+    transition: all 300ms ease-in-out;
+    position: relative;
+}
+nav a:hover,
+nav a:active,
+nav li.active a{
+    color: var(--gray-400);
+}
+
+nav a::after{
+    content: '';
+    background-color: var(--gray-400);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: transform .3s linear;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+nav a:hover::after,
+nav a:active::after,
+nav li.active a::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header form{
+    margin-left: 100px;
+}
