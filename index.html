@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header-content">
                 <a class="logo" href="#">
                     <img src="img/logo.svg" alt="">
                 </a>
-    
                 <div class="nav-search">
                     <nav>
                         <ul>
@@ -33,18 +35,84 @@
                         </ul>
                     </nav>
     
-                    <form>
+                    <form class="search">
                         <input placeholder="Search" type="text">
                         <button>
                             <img src="img/search.svg" alt="">
                         </button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <!-- Post List Component -->
+                <div class="post-list">
+                    <h1>Recent Posts</h1>
+                    <div class="category-list">
+                        <a href="#">All</a>
+                        <a href="#">Design Theory</a>
+                        <a href="#">Tech</a>
+                        <a href="#">User Interface</a>
+                    </div>
+                    <div class="post-items">
+                        <article>
+                            <a href="#">September 24.2020</a>
+                            <div class="post-title-area">
+                                <h2>Bad Design vs. Good Design: 5 Examples We can Learn From</h2>
+                                <div>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                </div>
+                            </div>
+                            
+                        </article>
+                        <article>
+                            <a href="#">September 24.2020</a>
+                            <div class="post-title-area">
+                                <h2>Bad Design vs. Good Design: 5 Examples We can Learn From</h2>
+                                <div>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                </div>
+                            </div>
+                            
+                        </article>
+                    </div>
+                </div><!-- Post List Component End -->
+
 
             </div>
         </div>
-        
-    </header>
+    </main>
+
+    <footer>
+        <a class="back-top" href="#header"><img src="img/arrow-top.svg" alt=""></a>
+        <div class="container">
+            <div class="footer-content">
+                <p>
+                    Copyright &copy; 2020 Meliora, Inc
+                </p>
+                <ul class="social-links">
+                    <li><a href="#"><img src="img/fb.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/git.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/tw.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/in.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

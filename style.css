@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
 
 :root{
     --orange: #FFBA9D;
@@ -20,17 +19,22 @@
     --text-base: 16px;
     --text-sm: 12px;
 }
+html {
+    scroll-behavior: smooth;
+}
 body, input, textarea, button{
     font-family: 'Roboto Mono', monospace;
-    font-weight: 500;
     font-size: var(--text-base);
     line-height: 32px;
 }
-.heading-1{
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400;
+}
+.heading-1, h1{
     font-size: var(--text-xl);
     line-height: 36px;
 }
-.heading-2{
+.heading-2, h2{
     font-size: var(--text-lg);
     line-height: 28px;
 }
@@ -92,12 +96,11 @@ p{
     border: 1px solid var(--gray-400);
 }
 
-
 /* 
     Header
 */
 header{
-    margin-top: 96px;
+    padding-top: 96px;
 }
 .header-content{
     display: flex;
@@ -114,6 +117,8 @@ nav li{
     list-style: none;
 }
 nav a{
+    line-height: 32px;
+    display: inline-block;
     text-decoration: none;
     color: var(--gray-300);
     transition: all 300ms ease-in-out;
@@ -144,6 +149,155 @@ nav li.active a::after{
     transform-origin: left;
 }
 
-header form{
+.search{
     margin-left: 100px;
+    min-width: 265px;
+    position: relative;
+}
+.search input{
+    width: 100%;
+    height: 40px;
+}
+.search button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+
+/* 
+    Form Element
+*/
+input{
+    background-color: var(--gray-100);
+    border-radius: 3px;
+    height: 44px;
+    font-size: 12px;
+    line-height: 16px;
+    border: none;
+    padding: 15px 14px;
+}
+input:focus,
+input:active{
+    border: none;
+    outline: none;
+}
+
+
+/* 
+    Footer
+*/
+footer{
+    background-color: var(--gray-100);
+    position: relative;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 94px;
+    padding-top: 36px;
+}
+.footer-content p{
+    margin-bottom: 0;
+}
+.social-links{
+    list-style: none;
+    display: flex;
+    column-gap: 24px;
+}
+.back-top{
+    width: 63px;
+    height: 63px;
+    border-radius: 63px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 67px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-top img{
+    margin-top: 20px;
+}
+
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-block: 96px;
+}
+/* 
+    Post List
+*/
+.post-list{
+    flex: 0 0 66.67%;
+    width: 66.67%;
+}
+
+.post-list h1{
+    margin-bottom: 24px;
+}
+.post-list .category-list{
+    margin-bottom: 40px;
+}
+.post-items article{
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--gray-200);
+}
+.post-items article:last-child{
+    border-bottom: none;
+}
+.post-items article a{
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--gray-300);
+    text-decoration: none;
+}
+.post-title-area{
+    display: flex;
+}
+.post-title-area h2{
+    flex: 0 0 75%;
+    width: 75%;
+}
+.post-title-area>div{
+    flex: 0 0 25%;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: baseline;
+    gap: 4px;
+    justify-content: flex-end;
+    max-height: 64px;
+    overflow: hidden;
+}
+.tag{
+    color: var(--gray-400);
+    background-color: var(--gray-100);
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* 
+    Side bar
+*/
+.side-bar{
+    flex: 0 0 33.33%;
+    width: 33.33%;
 }
