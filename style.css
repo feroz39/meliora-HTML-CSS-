@@ -148,7 +148,6 @@ nav li.active a::after{
     transform: scaleX(1);
     transform-origin: left;
 }
-
 .search{
     margin-left: 100px;
     min-width: 265px;
@@ -203,8 +202,8 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 94px;
-    padding-top: 36px;
+    padding-top: 31px;
+    padding-bottom: 31px;
 }
 .footer-content p{
     margin-bottom: 0;
@@ -213,6 +212,7 @@ footer{
     list-style: none;
     display: flex;
     column-gap: 24px;
+    line-height: initial;
 }
 .back-top{
     width: 63px;
@@ -294,10 +294,79 @@ footer{
     text-decoration: none;
 }
 
+.pagination{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+.pagination a{
+    text-decoration: none;
+    color: var(--gray-400);
+}
+.pagination a.active{
+    color: var(--orange);
+}
+.pagination a:first-child{
+    margin-right: 8px;
+}
+.pagination a:last-child{
+    margin-left: 8px;
+}
+
+.category-list{
+    display: flex;
+    column-gap: 48px;
+    align-items: center;
+    position: relative;
+}
+.category-list::after{
+    content: '';
+    background-color: var(--gray-200);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    z-index: -1;
+}
+.category-list a.active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.category-list a.active{
+    color: var(--gray-400);
+}
+
 /* 
     Side bar
 */
-.side-bar{
+aside,.sidebar{
     flex: 0 0 33.33%;
     width: 33.33%;
+}
+.widget{
+    padding-right: 25%;
+}
+.widget h2{
+    margin-bottom: 36px;
+}
+.widget .social-links{
+    margin-top: 48px;
+}
+.exclusive-btn{
+    display: flex;
+    align-items: center;
+    color: var(--gray-400);
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.exclusive-btn span{
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+}
+.exclusive-btn span img{
+    width: 4px;
 }

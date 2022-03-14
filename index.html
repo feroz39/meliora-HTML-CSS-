@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Style Sheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -44,21 +49,43 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header><!-- Header -->
 
     <main>
         <div class="container">
             <div class="main-content">
+
+                <!-- Sidebar -->
+                <aside>
+                    <div class="widget site-intro">
+                        <h2 class="heading-1">What I do!</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet, orci in bibendum luctus, turpis ante pretium velit, eu rutrum augue erat ac eros. Cras ultricies mattis convallis.
+                        </p>
+                        <a href="#" class="exclusive-btn">Explore Me <span class="arrow-btn"><img src="img/arrow-left.svg" alt=""></span></a>
+                        <ul class="social-links">
+                            <li><a href="#"><img src="img/fb.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/git.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/tw.svg" alt=""></a></li>
+                            <li><a href="#"><img src="img/in.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </aside><!-- Sidebar -->
+
                 <!-- Post List Component -->
                 <div class="post-list">
+
                     <h1>Recent Posts</h1>
-                    <div class="category-list">
-                        <a href="#">All</a>
+
+                    <nav class="category-list">
+                        <a href="#" class="active">All</a>
                         <a href="#">Design Theory</a>
                         <a href="#">Tech</a>
                         <a href="#">User Interface</a>
-                    </div>
+                    </nav>
+
                     <div class="post-items">
+
                         <article>
                             <a href="#">September 24.2020</a>
                             <div class="post-title-area">
@@ -72,8 +99,8 @@
                                     <a class="tag" href="#">#HCI</a>
                                 </div>
                             </div>
-                            
                         </article>
+
                         <article>
                             <a href="#">September 24.2020</a>
                             <div class="post-title-area">
@@ -87,16 +114,25 @@
                                     <a class="tag" href="#">#HCI</a>
                                 </div>
                             </div>
-                            
                         </article>
+                        
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="arrow-btn"><img src="img/arrow-right.svg" alt=""></a>
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#" class="arrow-btn"><img src="img/arrow-left.svg" alt=""></a>
                     </div>
                 </div><!-- Post List Component End -->
-
 
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <a class="back-top" href="#header"><img src="img/arrow-top.svg" alt=""></a>
         <div class="container">
@@ -112,7 +148,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer><!-- Footer -->
     
 </body>
 </html>
