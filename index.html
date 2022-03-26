@@ -23,21 +23,38 @@
                 <a class="logo" href="#">
                     <img src="img/logo.svg" alt="">
                 </a>
+                <button class="nav-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="nav-search">
                     <nav>
                         <ul>
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Contact Us</a></li>
-                            <li>
+                            <li class="has-submenu">
+                                <a href="#">Services</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Nav Item</a></li>
+                                    <li><a href="#">Nav Item</a></li>
+                                    <li><a href="#">Nav Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
                                 <a href="#">More</a>
-                                <!-- <ul class="submenu">
+                                <ul class="submenu">
                                     <li><a href="#">Nav Item</a></li>
                                     <li><a href="#">Nav Item</a></li>
                                     <li><a href="#">Nav Item</a></li>
-                                </ul> -->
+                                </ul>
                             </li>
                         </ul>
+                        <button class="nav-remove">
+                            <span></span>
+                            <span></span>
+                        </button>
                     </nav>
     
                     <form class="search">
@@ -115,6 +132,34 @@
                                 </div>
                             </div>
                         </article>
+                        <article>
+                            <a href="#">September 24.2020</a>
+                            <div class="post-title-area">
+                                <h2>Bad Design vs. Good Design: 5 Examples We can Learn From</h2>
+                                <div>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <a href="#">September 24.2020</a>
+                            <div class="post-title-area">
+                                <h2>Bad Design vs. Good Design: 5 Examples We can Learn From</h2>
+                                <div>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                    <a class="tag" href="#">#HCI</a>
+                                </div>
+                            </div>
+                        </article>
                         
                     </div>
 
@@ -149,6 +194,33 @@
             </div>
         </div>
     </footer><!-- Footer -->
+
+    <script>
+        /* 
+            Show/Hide Submenu 
+        */
+        let hasSubMenu = document.querySelectorAll('.has-submenu');
+        hasSubMenu.forEach( element => {
+            element.addEventListener('click', function(e){
+                element.classList.toggle('show')
+            })
+        })
+
+        /* 
+            Show/Hide Mobile Menu
+        */
+        let menuButton = document.querySelector('.nav-btn')
+        let menuRemove = document.querySelector('.nav-remove')
+        let nav = document.querySelector('.nav-search nav')
+
+        menuButton.addEventListener('click', function(){
+            nav.classList.add('show');
+        })
+        menuRemove.addEventListener('click', function(){
+            nav.classList.remove('show');
+        })
+
+    </script>
     
 </body>
 </html>
